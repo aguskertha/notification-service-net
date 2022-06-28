@@ -1,0 +1,30 @@
+syntax = "proto3";
+import "google/api/annotations.proto";
+option csharp_namespace = "GrpcGreeter";
+
+package notification;
+
+// The greeting service definition.
+service Notification {
+  // Sends a greeting
+  rpc SendNotification (NotificationRequest) returns (NotificationResponse){
+    option (google.api.http) = {
+      post: "/v1/notification/send"
+      body: "*"
+    };
+  }
+}
+
+// The request message containing the user's name.
+message NotificationRequest {
+  string deviceId = 1;
+  bool isAndroidDevice = 2;
+  string title = 3;
+  string body = 4;
+}
+
+// The response message containing the greetings.
+message NotificationResponse {
+  bool isSuccess = 1;
+  string message = 2;
+}

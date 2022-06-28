@@ -1,0 +1,5 @@
+obj\Debug\net6.0\Protos/Notification.cs \
+obj\Debug\net6.0\Protos/NotificationGrpc.cs: google/api/http.proto\
+ C:/Users/bagus_ipgofkv/.nuget/packages/grpc.tools/2.40.0/build/native/include/google/protobuf/descriptor.proto\
+ google/api/annotations.proto\
+ Protos/notification.proto
